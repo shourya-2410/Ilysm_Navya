@@ -1,0 +1,1653 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>Happy Birthday Navu...💫😘💖</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+<style>
+
+#letterBox{
+margin-top:40px;
+padding:40px;
+background:rgba(255,255,255,0.05);
+border-radius:25px;
+backdrop-filter:blur(10px);
+animation:fadeIn 1.5s ease;
+box-shadow:0 0 30px rgba(255,255,255,0.08);
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#0b0b2b;
+color:white;
+overflow-x:hidden;
+cursor:none;
+}
+
+/* LOADER */
+
+#loader{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:#0b0b2b;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:2rem;
+z-index:10000;
+color:#ff4da6;
+}
+
+/* CUSTOM CURSOR */
+
+.cursor{
+font-size:22px;
+position:fixed;
+pointer-events:none;
+z-index:9999;
+transform:translate(-50%,-50%);
+}
+
+/* STARS */
+
+.stars{
+position:fixed;
+width:100%;
+height:100%;
+background:url('https://i.imgur.com/YKY28eT.png');
+animation:moveStars 120s linear infinite;
+z-index:-2;
+opacity:0.4;
+}
+
+@keyframes moveStars{
+from{
+transform:translateY(0);
+}
+to{
+transform:translateY(-2000px);
+}
+}
+
+/* FLOATING HEARTS */
+
+.heart{
+position:fixed;
+bottom:-20px;
+color:#ff4da6;
+animation:float 10s linear infinite;
+font-size:20px;
+opacity:0.7;
+}
+
+@keyframes float{
+0%{
+transform:translateY(0) rotate(0deg);
+opacity:0;
+}
+50%{
+opacity:1;
+}
+100%{
+transform:translateY(-120vh) rotate(360deg);
+opacity:0;
+}
+}
+
+/* SECTIONS */
+
+section{
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+padding:40px;
+text-align:center;
+}
+
+/* FADE ANIMATION */
+
+.fade-in{
+animation:fadeIn 2s ease;
+}
+
+@keyframes fadeIn{
+from{
+opacity:0;
+transform:translateY(30px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+/* HERO */
+
+.hero h1{
+font-size:4rem;
+background:linear-gradient(to right,#ff4da6,#ffffff);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.hero p{
+margin-top:20px;
+font-size:1.2rem;
+opacity:0.8;
+}
+
+/* BUTTON */
+
+.btn{
+margin-top:30px;
+padding:15px 35px;
+border:none;
+border-radius:40px;
+background:#ff4da6;
+color:white;
+font-size:1rem;
+cursor:pointer;
+transition:0.4s;
+box-shadow:0 0 25px #ff4da6;
+
+position:relative;
+overflow:hidden;
+}
+
+.btn::before{
+content:"";
+position:absolute;
+top:0;
+left:-100%;
+width:100%;
+height:100%;
+background:linear-gradient(
+90deg,
+transparent,
+rgba(255,255,255,0.4),
+transparent
+);
+transition:0.8s;
+}
+
+.btn:hover::before{
+left:100%;
+}
+
+.btn:hover{
+transform:scale(1.1);
+}
+
+/* TYPING */
+
+.typing{
+font-size:2rem;
+max-width:700px;
+line-height:1.8;
+white-space:pre-line;
+}
+
+/* GALLERY */
+
+.gallery{
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+justify-content:center;
+margin-top:40px;
+}
+
+.gallery img{
+width:260px;
+height:320px;
+object-fit:cover;
+border-radius:20px;
+transition:0.5s;
+box-shadow:0 0 25px rgba(255,255,255,0.1);
+}
+
+.gallery img:hover{
+transform:scale(1.05);
+}
+
+/* CARDS */
+
+.cards{
+display:flex;
+flex-wrap:wrap;
+gap:20px;
+justify-content:center;
+margin-top:40px;
+}
+
+.card{
+width:250px;
+padding:30px;
+background:rgba(255,255,255,0.06);
+border:1px solid rgba(255,255,255,0.15);
+backdrop-filter:blur(15px);
+border-radius:20px;
+backdrop-filter:blur(10px);
+transition:0.5s;
+cursor:pointer;
+}
+
+.card:hover{
+transform:translateY(-10px);
+background:#ff4da6;
+}
+
+/* TIMELINE */
+
+.timeline{
+margin-top:40px;
+max-width:800px;
+}
+
+.timeline-item{
+margin:30px 0;
+padding:20px;
+border-left:3px solid #ff4da6;
+text-align:left;
+background:rgba(255,255,255,0.05);
+border-radius:10px;
+line-height:1.8;
+}
+
+/* REASONS */
+
+.reason-box{
+margin-top:30px;
+font-size:1.3rem;
+color:#ffb3d9;
+max-width:700px;
+line-height:1.8;
+white-space:pre-line;
+}
+
+/* FINAL */
+
+.final h1{
+font-size:5rem;
+color:#ff4da6;
+text-shadow:0 0 25px #ff4da6;
+}
+
+.final p{
+max-width:900px;
+margin-top:30px;
+line-height:2;
+font-size:1.2rem;
+}
+
+/* SECRET */
+
+.secret{
+position:absolute;
+font-size:25px;
+cursor:pointer;
+animation:pulse 2s infinite;
+}
+
+@keyframes pulse{
+0%{
+transform:scale(1);
+}
+50%{
+transform:scale(1.3);
+}
+100%{
+transform:scale(1);
+}
+}
+
+/* VIDEO */
+
+.video-box{
+width:80%;
+max-width:800px;
+border-radius:25px;
+margin-top:30px;
+box-shadow:0 0 30px rgba(255,255,255,0.2);
+overflow:hidden;
+transition:0.4s ease;
+}
+
+.video-wrapper{
+position:relative;
+display:inline-block;
+}
+
+.play-icon{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+font-size:60px;
+color:white;
+text-shadow:0 0 20px #ff4da6;
+pointer-events:none;
+z-index:10;
+animation:pulse 2s infinite;
+}
+
+
+.video-box:hover{
+transform:scale(1.02);
+box-shadow:0 0 40px rgba(255,77,166,0.4);
+}
+
+/* GIF */
+
+.gif-container{
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+justify-content:center;
+margin-top:30px;
+}
+
+.gif-container img{
+width:250px;
+border-radius:20px;
+transition:0.5s;
+box-shadow:0 0 20px rgba(255,255,255,0.15);
+}
+
+.gif-container img:hover{
+transform:scale(1.05);
+}
+
+/* COUNTDOWN */
+
+#countdown{
+font-size:2.5rem;
+color:#ff4da6;
+margin-top:20px;
+}
+
+/* GIFT REVEAL */
+
+.gift-show{
+animation:giftReveal 2s ease;
+}
+
+@keyframes giftReveal{
+0%{
+opacity:0;
+transform:translateY(50px);
+}
+
+100%{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+#endMessage{
+background:rgba(255,255,255,0.05);
+padding:30px;
+border-radius:25px;
+backdrop-filter:blur(10px);
+box-shadow:0 0 30px rgba(255,77,166,0.15);
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:2.5rem;
+}
+
+.typing{
+font-size:1.2rem;
+}
+
+.final h1{
+font-size:3rem;
+}
+
+.gallery img{
+width:90%;
+height:auto;
+}
+
+.video-box{
+width:95%;
+}
+
+.card{
+width:90%;
+}
+
+.timeline-item{
+font-size:0.95rem;
+}
+
+.final p{
+font-size:1rem;
+}
+
+#countdown{
+font-size:1.5rem;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div id="loader">
+💖 Loading your surprise...
+</div>
+
+<div class="cursor"></div>
+<div class="stars"></div>
+
+<!-- MUSIC -->
+
+<audio id="music" loop>
+<source src="music.mp3" type="audio/mp3">
+</audio>
+
+<audio id="voice">
+<source src="voice.mp3" type="audio/mp3">
+</audio>
+
+<audio id="birthdaySong">
+<source src="birthday-song.mp3" type="audio/mp3">
+</audio>
+
+<!-- HERO -->
+
+<section class="hero fade-in">
+
+<h1>Happy Birthday Meri Pandaaa 🐼❤️</h1>
+
+<p>
+Someone special has something for you...😇
+</p>
+
+<button class="btn" onclick="startExperience()">
+Open The Surprise ✨
+</button>
+
+<h1 id="countdown"></h1>
+
+</section>
+
+<!-- TYPING -->
+
+<section class="fade-in">
+
+<div class="typing" id="typingText"></div>
+
+</section>
+
+<!-- GALLERY -->
+
+<section class="fade-in">
+
+<h1>Our Memories 📸</h1>
+
+<div class="gallery">
+
+<img src="us1.jpg" alt="memory1">
+<img src="us2.jpg" alt="memory2">
+<img src="us3.jpg" alt="memory3">
+
+</div>
+
+</section>
+
+<!-- VIDEO -->
+
+<section class="fade-in">
+
+<h1>Little Moments 🎥</h1>
+
+<div class="video-wrapper">
+
+
+
+<video controls playsinline preload="metadata"
+class="video-box"
+poster="memory-thumbnail.jpg">
+
+<source src="0522.mp4" type="video/mp4">
+
+</video>
+
+</div>
+
+</section>
+
+<!-- GIFS -->
+
+<section class="fade-in">
+
+<h1>Cuteness Overload 😭💖</h1>
+
+<button class="btn"
+onclick="showImagination()">
+
+💌 If I Could Show My Thoughts
+</button>
+
+<div class="gif-container">
+
+<img src="gif1.gif" alt="gif1">
+<img src="gif2.gif" alt="gif2">
+
+</div>
+
+<div id="imaginationBox"
+style="
+display:none;
+margin-top:30px;
+animation:fadeIn 1s ease;
+">
+
+<h2 style="color:#ffb3d9;">
+The Things I Barely Express... 💭💖
+</h2>
+
+<p style="
+max-width:700px;
+margin:20px auto;
+line-height:1.8;
+color:#ffd6eb;
+">
+
+Just a few random little moments I imagined...
+because some feelings are easier to show than explain 😌✨
+I hope Puri ho jaye...🤞
+
+</p>
+
+<video controls
+class="video-box"
+poster="imagination-thumbnail.jpg">
+
+<source src="imagination.mp4"
+type="video/mp4">
+
+</video>
+
+</div>
+
+</section>
+
+<!-- CARDS -->
+
+<section class="fade-in">
+
+<h1>Things I Love About You 💖</h1>
+
+<div class="cards">
+
+<div class="card">
+Your Cute Anger & Jealousy Ufff...😭🤌🏻💓
+The way you get annoyed, act different, or become a little jealous sometimes… idk why but it feels...🙈
+Even your anger has this cute emotions that makes me smile instead of getting scared 😌✨
+</div>
+
+<div class="card">
+The Way You Care 😭
+The way you support me, understand me, listen to me, and stay there for me… it feels genuine, rare, and comforting 😭✨
+</div>
+
+<div class="card">
+Your Presence 😌
+No matter how bad or normal the day is, your presence somehow makes everything feel lighter and better 💛 
+</div>
+
+<div class="card">
+The Way You Became “Home” 😌🌸
+I don’t know how to explain it properly… but talking to you started feeling like peace.
+No pretending, no pressure — just comfort 💛
+No matter how the day went, somehow my mind always felt calmer after talking to you 😭✨
+</div>
+
+</div>
+
+</section>
+
+<!-- TIMELINE -->
+
+<section class="fade-in">
+
+<h1>Our Story ✨</h1>
+
+<div class="timeline">
+
+<div class="timeline-item">
+WHERE IT ALL STARTED ✨🌸
+
+Sach bolu toh kaafi funny lagta hai ki kuch stories bina pata chale hi shuru ho jaati hain 😌✨
+
+Maine tumhe pehli baar properly Class 10 mein notice kiya tha, jab last day ko dekha tha jb tum Bhoomi saath corridor mein thi aur kaafi emotional thi 🥲. Tab mujhe bilkul andaza nahi tha ki ek din tum meri daily life ka itna important hissa ban jaogi 😇💛.
+
+Phir Class 11 ki picnic aayi 🌸✨. Ek chhoti si conversation hui, aur uske baad dheere-dheere sab kuch badalne laga. Random baatein daily conversations mein badal gayi, awkward eye contacts cute moments ban gaye, aur pata hi nahi chala kab hamara bond itna special ho gaya 😹💓.
+
+Aur honestly, school ne mujhe bahut si yaadein di hain, lekin tumse iss tarah milna aur tumhare saath itni memories banana hamesha meri favourite memories mein se ek rahega 🌸💛.
+
+</div>
+
+<div class="timeline-item">
+WOH RAATEIN JO KABHI KHATM HI NAHI HOTI THI 🌙✨
+
+Phir ek aisa phase aaya jab raatein bas raatein nahi rahi 😌💛. Dheere-dheere hamari baatein meri daily life ka sabse special part ban gayi. Ek chhota sa message (jaise 11 Feb ko jab tumne mujhe pehli baar "BBY" bulaya tha 😭💓🙈) kab ghanton ki conversations mein badal gaya, pata hi nahi chala.
+
+Hum raat bhar baatein karte, kabhi-kabhi toh subah tak bhi 🥰✨. Neend, time aur duniya ki tension sab bhool jaate the. Bas random topics, ek dusre ko tease karna, feelings share karna, stupid jokes aur kabhi-kabhi unexpectedly deep talks... 💛
+
+Sabse crazy baat ye thi ki kitni bhi der baat kar lete, phir bhi lagta tha ki aur thodi der baat ho jaaye 😭. Mere liye woh sirf conversations nahi thi, balki meri favourite person ke saath bani kuch sabse khoobsurat memories thi 🌸✨
+
+</div>
+
+<div class="timeline-item">
+THE CONFESSION 💌✨
+
+Hamari random baaton, teasing, late-night conversations aur chhoti-chhoti memories ke beech, pata hi nahi chala kab tum mujhe pasand karne lagi 😌💛.
+
+Aur sabse funny baat? Mujhe sach mein bilkul idea hi nahi tha 😹. Farewell ke baad tumne apni feelings bata bhi di thi, lekin farewell wale din bhi tumne unhe itna achhe se chhupaya ki mujhe kuch samajh hi nahi aaya. Tum uss din thodi zyada hi mtlab kese samjahu... aur ab samajh aata hai kyun 🤭💓. Waise maanna padega, feelings hide karne mein tum kaafi expert nikli 😌.
+
+Lekin honestly, 10 February ki raat, around 12:06 AM wala moment kabhi beat nahi ho sakta ✨. Woh ek simple sa message — "...i have feeling for u..."💌
+
+Aur sach bataun? 😭💓 Ek second ke liye toh mera dil hi kaam karna bhool gaya tha. Main uss waqt sab kuch express nahi kar paaya, lekin andar hi andar woh moment mere liye bahut zyada special tha.
+
+Kyuki kabhi-kabhi sabse khoobsurat feelings kisi grand gesture se nahi aati... woh bas ek simple message ke saath chupke se dil mein apni jagah bana leti hain, especially jab woh message kisi bahut special insaan ki taraf se ho 🌸💛.
+
+
+</div>
+
+<div class="timeline-item">
+🎂 And now your special day... toh aap continue kro
+</div>
+
+</div>
+
+</section>
+
+<!-- RANDOM REASONS -->
+
+<section class="fade-in">
+
+<h1>Ahm Ahm...🌸</h1>
+
+<button class="btn" onclick="generateReason()">
+Click Me ✨
+</button>
+
+<div class="reason-box" id="reasonBox"></div>
+
+</section>
+
+<!-- FINAL VIDEO -->
+
+<section class="fade-in">
+
+<h2>I lOVE YOU💌</h2>
+
+<video controls playsinline class="video-box"
+poster="love-thumbnail.jpg">
+
+<source src="final.mp4" type="video/mp4">
+
+</video>
+
+</section>
+
+<!-- FINAL MESSAGE -->
+
+<section class="final fade-in">
+
+<button class="btn" onclick="openLetter()">
+Open My Letter 💌
+</button>
+
+<div id="letterBox" style="display:none;">
+
+<h1>Happy Birthday </h1>
+<h1>Sweet💋Heart</h1>
+
+<p>
+
+FOR MY NAVU 🌸<br><br>
+
+Happy Birthday, meri jaan 💛<br><br>
+
+Honestly… abhi bhi samajh nahi aata ki aap itni important kaise ban gyi meri life me 😌✨<br><br>
+
+Sab kuch kitna unexpectedly start hua na…<br><br>
+class 10th me bas ek baar aapko notice karna, phir class 11 picnic, aur uske baad random conversations jo dheere dheere something really special ban gyi 💖<br><br>
+
+Aur somewhere between all those late-night talks, teasing, awkward eye contacts, heartbeat-fast moments,<br><br> “bby,bhudhu,makkar,makhan etc😘” texts, and random little memories…<br><br>
+aur yaad hai kaise message karke instantly delete kar dete the aap 😏😭
+you quietly became my comfort person ✨<br><br>
+
+I don’t think aapko realize bhi hai ki your presence affects me kitna 😭💓<br><br>
+
+The way you talk to me, support me, care for me, understand me, tease me, and love me so genuinely… yrr it all means way more than I can ever explain 😭💛<br><br>
+
+Aur shayad isi liye aapke saath spent har moment — online ho ya irl — automatically special ban gaya 🙈✨<br><br>
+
+Those late-night conversations where we literally forgot about sleep and the whole world…<br><br>
+yrr woh sab toh mwaah...💋😭<br><br>
+The dreams, imaginations, personal problems, random bkc😝, deep talks… everything with you just felt different 😌🌸<br><br>
+
+And obviously…
+10 February, around 12:06AM ✨<br><br>
+
+That tiny little<br><br>
+“I have feeling for you” 💌
+
+Istg meri jaan 😭💓<br><br>
+uss moment pe sach me mera heart kaam karna bhool gaya tha.<br><br>
+
+And even now, after everything…<br><br>
+my favorite thing is still us 😌
+Us talking.
+Us laughing.
+Us being completely ourselves with each other 💛<br><br>
+
+So on your birthday, bas itna bolna tha… thank you 🌸✨<br><br>
+
+Thank you for your love, care, support, patience, presence, efforts, and for becoming one of the most beautiful parts of my life 💖<br><br>
+
+Please hamesha aise hi rehna 😭💓<br><br>
+Stay happy.
+Stay mine.(Always)
+And please never stop being meri jaan 💗😌✨<br><br>
+
+Ilysm foreverrrr 💋💌💝<br><br>
+— Yours Pati😏,Jaan🥰,BF😘,makkar😜etc.<br><br>
+
+</p>
+
+<button class="btn" onclick="showFinalMessage()">
+One Last Thing 👀
+</button>
+
+<button class="btn" onclick="document.getElementById('voice').play()">
+Hear My Voice 💌
+</button>
+
+</div>
+
+</section>
+
+<!-- SECRET NOTES -->
+
+<div class="secret" style="top:20%;left:10%;" onclick="secretNote('You looked too cute every day😭(Meri sleep cycle kharab krdi🥰💗knkn)')">💖</div>
+
+<div class="secret" style="top:60%;left:80%;" onclick="secretNote('plzz aap bhi GAP km krwana...I Love U baby...💋')">💖</div>
+
+<div class="secret" style="top:85%;left:20%;" onclick="secretNote('You secretly fell first 🙈💘')">💖</div>
+
+
+<script>
+
+/* LOADER */
+
+window.onload=()=>{
+document.getElementById('loader').style.display='none';
+}
+
+/* CURSOR */
+
+const cursor=document.querySelector('.cursor');
+cursor.innerHTML="🐼";
+document.addEventListener('mousemove',(e)=>{
+cursor.style.left=e.clientX+'px';
+cursor.style.top=e.clientY+'px';
+});
+
+/* FLOATING EMOJIS */
+
+function createHeart(){
+
+const heart=document.createElement('div');
+
+heart.classList.add('heart');
+
+const emojis=['💗','✨','🌸','💋','💕','🐼'];
+
+heart.innerHTML=emojis[Math.floor(Math.random()*emojis.length)];
+
+heart.style.left=Math.random()*100+'vw';
+
+heart.style.fontSize=Math.random()*20+15+'px';
+
+document.body.appendChild(heart);
+
+setTimeout(()=>{
+heart.remove();
+},10000);
+
+}
+
+setInterval(createHeart,1200);
+
+/* START */
+
+function startExperience(){
+bgMusic.play().catch(()=>{});
+window.scrollTo({
+top:window.innerHeight,
+behavior:'smooth'
+});
+}
+
+/* TYPING EFFECT */
+
+const text=`Hey Navya 🌸
+
+So… this isn’t just a normal birthday wish.
+I wanted to make something a little special for someone who somehow became special herself 😌
+
+Maybe we don’t talk as much now, maybe some moments stayed incomplete…
+but still, somehow you become a beautiful part of my daily life.
+
+And honestly?
+Your shy smiles, nervous moments, and our random little memories deserved more than just a simple “Happy Birthday” text 😹💛
+
+So here it is…
+I hope you love it, and if something doesn't look perfect then sorry 😭💛 but till then you enjoy it my bby 😉 ✨`;
+
+let index=0;
+
+function typeText(){
+
+if(index<text.length){
+
+document.getElementById('typingText').innerHTML+=text.charAt(index);
+
+index++;
+
+setTimeout(typeText,40);
+
+}
+
+}
+
+typeText();
+
+/* RANDOM REASONS */
+
+const reasons=[
+
+`You know… your smile is actually dangerous 😭
+One second you’re shy and next second people forget what they were saying.`,
+
+`I still laugh thinking about how confident you act sometimes…
+and then eye contact happens 😹💓`,
+
+`You’re genuinely pretty…
+but your nervous expressions somehow make you even cuter 😌`,
+
+`I swear your heartbeat reacts faster to me than your words do 😭✨`,
+
+`plzz aap hamesha same rhena 💛`
+
+];
+
+function generateReason(){
+
+const random=Math.floor(Math.random()*reasons.length);
+
+document.getElementById('reasonBox').innerHTML=reasons[random];
+
+}
+
+/* SECRET NOTES */
+
+function secretNote(message){
+
+alert(message);
+
+}
+
+/* FINAL BUTTON */
+
+function openLetter(){
+
+document.getElementById("letterBox").style.display = "block";
+
+document.getElementById("letterBox")
+.scrollIntoView({
+behavior:"smooth"
+});
+
+}
+
+/* FINAL BUTTON */
+
+function showFinalMessage(){
+
+alert("Forever with me? 😭✨");
+
+confetti();
+
+new Audio('firework.mp3').play();
+
+}
+
+/* CONFETTI */
+
+function confetti(){
+
+for(let i=0;i<200;i++){
+
+let conf=document.createElement('div');
+
+conf.style.position='fixed';
+conf.style.width='10px';
+conf.style.height='10px';
+conf.style.background=`hsl(${Math.random()*360},100%,50%)`;
+conf.style.left=Math.random()*100+'vw';
+conf.style.top=Math.random()*100+'vh';
+conf.style.borderRadius='50%';
+conf.style.zIndex='999';
+
+document.body.appendChild(conf);
+
+let animation=conf.animate([
+
+{
+transform:'translateY(0px)',
+opacity:1
+},
+
+{
+transform:`translateY(${Math.random()*500-250}px)`,
+opacity:0
+}
+
+],{
+
+duration:2000
+
+});
+
+animation.onfinish=()=>conf.remove();
+
+}
+
+}
+
+/* COUNTDOWN */
+
+const targetDate=new Date("June 18, 2026 00:00:00").getTime();
+
+setInterval(()=>{
+
+const now=new Date().getTime();
+
+const distance=targetDate-now;
+
+if(distance <= 0){
+document.getElementById("countdown").innerHTML =
+"🎂 It's Your Birthday Today 🎉";
+return;
+}
+
+const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+
+document.getElementById("countdown").innerHTML=
+days+" Days Until Your Birthday 🎂";
+
+},1000);
+
+const bgMusic = document.getElementById('music');
+
+const voiceNote = document.getElementById('voice');
+
+const videos = document.querySelectorAll('video');
+
+bgMusic.volume = 0.25;
+
+/* WHEN VIDEOS PLAY */
+
+videos.forEach(video => {
+// Check if the playing video is the final gift video
+if (video.id === 'giftVideo') {
+    video.addEventListener('play', () => {
+        bgMusic.pause();
+        bgMusic.currentTime = 0; // Stops the music and resets it to the beginning
+    });
+    
+    // We intentionally leave out the 'pause' and 'ended' listeners for the gift video 
+    // so the background music never starts back up!
+} else {
+    // Normal behavior for all other videos
+    video.addEventListener('play', () => {
+        bgMusic.pause();
+    });
+
+    video.addEventListener('pause', () => {
+        bgMusic.play();
+    });
+
+    video.addEventListener('ended', () => {
+        bgMusic.play();
+    });
+}
+});
+
+/* WHEN VOICE NOTE PLAYS */
+
+voiceNote.addEventListener('play', () => {
+bgMusic.pause();
+});
+
+/* WHEN VOICE NOTE ENDS */
+
+voiceNote.addEventListener('ended', () => {
+bgMusic.play();
+});
+
+document.getElementById("birthdaySong")
+.addEventListener("ended", () => {
+
+bgMusic.play();
+
+});
+
+function moveButton(){
+
+const btn = document.getElementById("noBtn");
+
+const messages = [
+
+"Thinking? 😭💖",
+"Acha jiii 😏",
+"You already know the answer 😌✨",
+"My bby is shy 🙈",
+"Mujhe nahi chunoge🥺",
+"Humph...😌",
+"Caught you 😭",
+
+];
+
+/* RANDOM POPUP */
+
+const popup = document.createElement("div");
+
+popup.innerHTML =
+messages[Math.floor(Math.random()*messages.length)];
+
+popup.style.position = "fixed";
+
+popup.style.left = Math.random()*80 + "vw";
+
+popup.style.top = Math.random()*80 + "vh";
+
+popup.style.background = "#ff4da6";
+
+popup.style.padding = "10px 16px";
+
+popup.style.borderRadius = "20px";
+
+popup.style.color = "white";
+
+popup.style.zIndex = "99999";
+
+popup.style.boxShadow = "0 0 20px #ff4da6";
+
+popup.style.fontSize = "1rem";
+
+document.body.appendChild(popup);
+
+setTimeout(()=>{
+popup.remove();
+},1800);
+
+/* BIGGER BUTTON MOVEMENT */
+
+btn.style.position = "relative";
+
+const x = Math.random()*700 - 350;
+
+const y = Math.random()*250 - 125;
+
+btn.style.transform =
+`translate(${x}px,${y}px)`;
+
+btn.style.transition = "0.15s";
+
+}
+
+function yesAnswer(){
+
+/* SHOW FINAL MESSAGE */
+
+document.getElementById("answerText").innerHTML =
+`😭💖<br><br>
+
+Status Updated:<br><br>
+Navya 💖 Shourya<br><br>
+Forever Mode Activated ✨<br><br>
+
+Then it’s official now...<br><br>
+
+You’re stuck with me forever 😌✨<br><br>
+
+More late-night talks 🌙<br>
+More memories 📸<br>
+More overthinking together 😭<br>
+More “goodnight” texts that somehow become 2AM conversations 💛<br><br>
+
+And honestly?<br>
+I wouldn’t want it with anyone else 😌💖<br><br>
+
+Thank you for choosing me, meri panda 🐼✨
+
+Chlo jada khush hogaye hoge i hope if hue toh batana...<br><br>
+
+I LOVE U SO MUCH... Mwahhh💕💋💌`;
+
+/* CHANGE BACKGROUND */
+
+document.body.style.background =
+"linear-gradient(135deg,#ff4da6,#ff99cc,#0b0b2b)";
+
+/* CONFETTI */
+
+for(let i=0;i<250;i++){
+
+const conf=document.createElement("div");
+
+conf.style.position="fixed";
+
+conf.style.width="10px";
+
+conf.style.height="10px";
+
+conf.style.borderRadius="50%";
+
+conf.style.left=Math.random()*100+"vw";
+
+conf.style.top=Math.random()*100+"vh";
+
+conf.style.background=
+`hsl(${Math.random()*360},100%,50%)`;
+
+conf.style.zIndex="99999";
+
+document.body.appendChild(conf);
+
+conf.animate([
+
+{
+transform:"translateY(0px)",
+opacity:1
+},
+
+{
+transform:
+`translateY(${Math.random()*500-250}px)`,
+opacity:0
+}
+
+],{
+
+duration:2500
+
+});
+
+setTimeout(()=>{
+conf.remove();
+},2500);
+
+}
+
+}
+
+/* RELATIONSHIP TIMER */
+
+const loveDate = new Date("February 10, 2026 00:06:00").getTime();
+
+function updateLoveTimer(){
+
+const now = new Date().getTime();
+
+const diff = now - loveDate;
+
+const days = Math.floor(diff / (1000*60*60*24));
+
+const hours = Math.floor(
+(diff % (1000*60*60*24)) / (1000*60*60)
+);
+
+const minutes = Math.floor(
+(diff % (1000*60*60)) / (1000*60)
+);
+
+const seconds = Math.floor(
+(diff % (1000*60)) / 1000
+);
+
+document.getElementById("relationshipTimer").innerHTML =
+`${days} Days 💖 ${hours} Hours ✨<br>
+${minutes} Minutes 🌸 ${seconds} Seconds 😌`;
+
+}
+
+setInterval(updateLoveTimer,1000);
+
+updateLoveTimer();
+
+function cutCake(){
+
+document.getElementById("cakeEmoji").src="cake-cut.png";
+
+document.getElementById("cakeMessage").innerHTML=`
+🎉 HAPPY BIRTHDAY MERI PANDAAAA 🐼💖 🎉
+<br><br>
+May your smile stay this cute forever 😭💛
+<br><br>
+Cake officially cut 😌✨
+`;
+
+confetti();
+
+/* LOWER BACKGROUND MUSIC */
+bgMusic.volume = 0.08;
+
+/* PLAY BIRTHDAY SONG */
+const birthdaySong =
+document.getElementById("birthdaySong");
+
+birthdaySong.volume = 1;
+birthdaySong.play();
+
+birthdaySong.onended = () => {
+bgMusic.volume = 0.25;
+};
+
+}
+
+/* OPTIONAL SOUND */
+
+
+function endStory(){
+
+document.querySelector(".stars")
+.style.filter="blur(2px)";
+
+confetti();
+
+document.body.animate([
+
+{filter:"brightness(1)"},
+
+{filter:"brightness(1.4)"},
+
+{filter:"brightness(1)"}
+
+],{
+
+duration:2000
+
+});
+
+for(let i=0;i<25;i++){
+
+setTimeout(()=>{
+createHeart();
+},i*300);
+
+}
+
+document.getElementById("endMessage").style.display = "block";
+
+document.getElementById("endMessage").innerHTML = `
+
+🌸 The End...?
+
+Maybe for this website.
+
+But not for us. 🤍
+
+Because some people become memories.
+
+And some people become home.
+
+No matter where life takes us...
+
+No matter how busy days become...
+
+No matter how much silence appears sometimes...
+
+I never want us to become strangers again.
+
+Let's keep making memories.
+
+Let's keep annoying each other.
+
+Let's keep finding our way back.
+
+This surprise ends here...
+
+But my care for you doesn't. 💖
+
+And before you leave...
+
+I saved one last gift for you. 🎁✨
+
+`;
+
+
+setTimeout(()=>{
+
+const gift =
+document.getElementById("giftSection");
+
+gift.style.display="block";
+
+gift.classList.add("gift-show");
+
+gift.scrollIntoView({
+behavior:"smooth"
+});
+
+},4000);
+
+}
+
+function showImagination(){
+
+const box =
+document.getElementById("imaginationBox");
+
+if(box.style.display === "none"){
+
+box.style.display = "block";
+
+box.scrollIntoView({
+behavior:"smooth"
+});
+
+}
+
+}
+
+</script>
+
+<!-- VIRTUAL CAKE -->
+
+<section class="fade-in">
+
+<h1>Birthday Cake Time 🎂💖</h1>
+
+<p style="margin-top:20px;font-size:1.2rem;">
+Make a wish first... 😌✨
+</p>
+
+<div id="cakeBox" style="margin-top:30px;">
+
+<img
+id="cakeEmoji"
+src="cake.png"
+style="
+width:280px;
+transition:0.8s;
+">
+
+<button class="btn" onclick="cutCake()">
+Cut The Cake 🎂✨
+</button>
+
+</div>
+
+<h2 id="cakeMessage"
+style="
+margin-top:30px;
+color:#ffb3d9;
+line-height:1.8;
+">
+</h2>
+
+</section>
+
+
+<!-- PROPOSAL SECTION -->
+
+<section class="fade-in">
+
+<h1>One Last Question 😌💛</h1>
+
+<p style="margin-top:20px;font-size:1.2rem;">
+So… can I keep you forever? 👉👈
+</p>
+
+<div style="margin-top:30px;">
+
+<button class="btn" onclick="yesAnswer()">
+YES 😭💖
+</button>
+
+<button class="btn" id="noBtn" onclick="moveButton()">
+Lemme Think 😹
+</button>
+
+</div>
+
+<h2 id="answerText"
+style="margin-top:40px;color:#ffb3d9;line-height:1.8;">
+</h2>
+
+<!-- RELATIONSHIP TIMER -->
+
+<div id="loveTimerBox" style="
+margin-top:40px;
+padding:25px;
+background:rgba(255,255,255,0.06);
+border-radius:25px;
+backdrop-filter:blur(10px);
+box-shadow:0 0 25px rgba(255,77,166,0.25);
+max-width:700px;
+animation:fadeIn 1.5s ease;
+">
+
+<h2 style="
+font-size:2rem;
+color:#ff4da6;
+margin-bottom:15px;
+">
+Since You Became MORE Special 💖
+</h2>
+
+<p style="
+font-size:1.1rem;
+color:#ffd6eb;
+margin-bottom:20px;
+line-height:1.8;
+">
+Since 10 February 2026 ✨<br>
+And still counting forever 😌💛
+</p>
+
+<div id="relationshipTimer" style="
+font-size:1.4rem;
+line-height:2;
+color:white;
+font-weight:600;
+">
+Loading...
+</div>
+
+</div>
+
+</section>
+
+<section class="fade-in">
+
+<h1 style="
+font-size:3.5rem;
+background:linear-gradient(to right,#ff4da6,#ffffff);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+">
+One Last Button... 🌙
+</h1>
+
+<p style="
+max-width:700px;
+line-height:1.8;
+color:#ffffffcc;
+margin-top:20px;
+">
+Some gifts are opened once.
+
+Some memories stay forever.
+
+This is the last page of the website...
+
+but hopefully not the last page of our story. 🤍
+</p>
+
+
+<button class="btn"
+onclick="endStory()">
+Before You Leave... 🌸
+</button>
+
+<div id="endMessage"
+style="
+display:none;
+margin-top:40px;
+max-width:800px;
+line-height:2;
+font-size:1.2rem;
+color:#ffd6eb;
+">
+</div>
+
+<div id="giftSection"
+style="
+display:none;
+margin-top:40px;
+">
+
+<h2 style="
+font-size:2.5rem;
+margin-bottom:20px;
+color:#ffb3d9;
+">
+For The Girl Who Made 2026 Special 💖
+</h2>
+
+<p style="
+max-width:700px;
+line-height:1.8;
+color:#ffffffcc;
+margin-bottom:25px;
+">
+Thank you for every memory,
+every smile,
+every late-night conversation,
+and every moment that became special because you were in it. 🌸
+</p>
+
+<video
+id="giftVideo"
+controls
+class="video-box"
+poster="gift-thumbnail.jpg"
+onplay="stopMusicForGift()"> <source src="gift.mp4" type="video/mp4">
+
+</video>
+
+<br><br>
+
+<h2 style="color:#ffb3d9;">
+Now It's Your Turn 💌
+</h2>
+
+<p style="
+max-width:700px;
+margin:auto;
+line-height:1.8;
+color:#ffd6eb;
+">
+I've shared my side of the story...
+Now I would love to hear yours too 😌💖
+</p>
+
+<button
+class="btn"
+onclick="window.open('https://docs.google.com/spreadsheets/d/17lOmHsEQDCrTTH-u2jdRCyJKFOB13pa0qv-oxdME4WI/edit?usp=sharing')">
+Leave Something For Me 💌
+</button>
+
+
+</div>
+
+<script>
+
+/* FORCE PAUSE MUSIC PERMANENTLY FOR GIFT VIDEO */
+function stopMusicForGift() {
+    const bgMusic = document.getElementById('music');
+    if (bgMusic) {
+        bgMusic.pause();
+        bgMusic.currentTime = 0; // Resets it to the beginning
+    }
+    
+    // Completely break the volume or ability to auto-play again
+    bgMusic.volume = 0; 
+}
+
+const observer = new IntersectionObserver(entries=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.style.opacity="1";
+entry.target.style.transform="translateY(0)";
+
+}
+
+});
+
+});
+
+document.querySelectorAll("section").forEach(sec=>{
+
+sec.style.opacity="0";
+sec.style.transform="translateY(50px)";
+sec.style.transition="1s";
+
+observer.observe(sec);
+
+});
+
+
+</script>
+
+
+</body>
+</html>
